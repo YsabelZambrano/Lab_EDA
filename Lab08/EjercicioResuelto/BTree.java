@@ -67,7 +67,6 @@ public class BTree<E extends Comparable<E>> {
     private E divideNode(BNode<E> current, E cl, int k) {
         BNode<E> rd = nDes;
         BNode<E> nuevo = new BNode<>(orden);
-
         int mid = (orden - 1) / 2;
 
         for (int i = mid + 1; i < orden - 1; i++) {
@@ -85,11 +84,11 @@ public class BTree<E extends Comparable<E>> {
             insertInNode(nuevo, cl, rd, k - (mid + 1));
 
         nDes = nuevo;
-        return current.keys.get(mid); // clave que sube
+        return current.keys.get(mid);
     }
 
     public String toString() {
-        if (isEmpty()) return "Árbol B vacío.";
+        if (isEmpty()) return "Arbol B vacio.";
         return writeTree(this.root, 0);
     }
 

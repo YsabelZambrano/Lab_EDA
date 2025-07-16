@@ -18,10 +18,6 @@ public class BNode<E extends Comparable<E>> {
         return count == maxKeys;
     }
 
-    public boolean nodeEmpty() {
-        return count == 0;
-    }
-
     public boolean searchNode(E key, int[] pos) {
         pos[0] = 0;
         while (pos[0] < count && key.compareTo(keys.get(pos[0])) > 0) {
